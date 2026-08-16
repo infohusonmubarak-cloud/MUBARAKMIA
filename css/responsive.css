@@ -1,0 +1,74 @@
+/* ==========================================================================
+   Responsive — desktop styles live in style.css; this scales down.
+   Breakpoints checked at 1440/1280/1024/900/768/480/340.
+   ========================================================================== */
+
+/* ===== 1024px — small laptop / large tablet ===== */
+@media (max-width: 1024px){
+  .container{ padding:0 24px; }
+  .hero-inner{ grid-template-columns:1fr; gap:64px; }
+  .hero-photo-wrap{ order:-1; }
+  .hero-photo-frame{ width:min(320px, 70%); margin:0 auto; }
+  .about-grid{ grid-template-columns:1fr; gap:40px; }
+  .about-photo{ max-width:360px; aspect-ratio:4/3.4; }
+  .journey{ grid-template-columns:repeat(2, 1fr); row-gap:28px; }
+  .services-grid{ grid-template-columns:repeat(2, 1fr); }
+  .skills-grid{ grid-template-columns:1fr; gap:36px; }
+  .projects-grid{ grid-template-columns:1fr; }
+  .process-grid{ grid-template-columns:repeat(2, 1fr); row-gap:40px; }
+  .process-grid::before{ display:none; }
+  .why-grid{ grid-template-columns:repeat(2, 1fr); }
+  .testimonials-grid{ grid-template-columns:1fr; }
+  .contact-grid{ grid-template-columns:1fr; gap:50px; }
+  .case-grid{ grid-template-columns:1fr; }
+}
+
+/* ===== 900px — nav switches to mobile menu ===== */
+@media (max-width: 900px){
+  .nav-links{ display:none; }
+  .nav-cta .btn-ghost{ display:none; }
+  .hamburger{ display:flex; }
+  section{ padding:90px 0; }
+}
+
+/* ===== 768px — tablet ===== */
+@media (max-width: 768px){
+  h2{ font-size:clamp(28px, 6vw, 36px); }
+  .hero-inner h1{ font-size:clamp(34px, 8vw, 46px); }
+  .float-card{ font-size:11px; padding:8px 11px; }
+  .float-card.fc1{ left:-4%; top:6%; }
+  .float-card.fc2{ right:-4%; }
+  .float-card.fc3{ left:6%; }
+  .form-row{ grid-template-columns:1fr; }
+  .footer-top{ flex-direction:column; gap:30px; }
+  .cta-section{ padding:60px 30px; }
+}
+
+/* ===== 414/390/375px — phones ===== */
+@media (max-width: 480px){
+  .container{ padding:0 20px; }
+  section{ padding:70px 0; }
+  .hero-actions{ flex-direction:column; align-items:flex-start; gap:16px; }
+  .hero-actions .btn{ width:100%; justify-content:center; }
+  .journey{ grid-template-columns:1fr; }
+  .services-grid{ grid-template-columns:1fr; }
+  .process-grid{ grid-template-columns:1fr; }
+  .why-grid{ grid-template-columns:1fr; }
+  .trust-inner{ flex-direction:column; align-items:flex-start; }
+  .modal{ padding:28px 22px; }
+  .footer-cols{ gap:34px; }
+  .footer-bottom{ flex-direction:column; align-items:flex-start; }
+  .project-filter{ gap:8px; }
+}
+
+/* ===== 320px — smallest supported phones ===== */
+@media (max-width: 340px){
+  .hero-inner h1{ font-size:30px; }
+  .btn{ padding:12px 20px; font-size:13.5px; }
+  .brand{ font-size:14px; }
+}
+
+/* ===== 1440px+ — give the hero photo a bit more room ===== */
+@media (min-width: 1440px){
+  .hero-photo-frame{ width:420px; }
+}
